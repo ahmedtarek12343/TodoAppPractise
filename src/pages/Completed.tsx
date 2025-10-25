@@ -12,13 +12,13 @@ import { TodosList } from "@/components/TodosList";
 import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
-const Home = () => {
+const Completed = () => {
   return (
     <Table>
       <TableBody>
         <ErrorBoundary fallback={<div>Failed to load todos.</div>}>
           <Suspense fallback={<div>Loading todos...</div>}>
-            <TodosList booleanCheck={false} />
+            <TodosList booleanCheck={true} />
           </Suspense>
         </ErrorBoundary>
       </TableBody>
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Completed;

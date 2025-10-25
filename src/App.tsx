@@ -1,6 +1,7 @@
 import MainLayout from "./layout/MainLayout";
 import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
+import Completed from "./pages/Completed";
 import { Toaster } from "sonner";
 export function App() {
   return (
@@ -8,6 +9,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/completed" element={<Completed />} />
         </Route>
       </Routes>
       <Toaster richColors />

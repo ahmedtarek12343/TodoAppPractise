@@ -1,4 +1,4 @@
-import { Check, Home, Inbox, Plus } from "lucide-react";
+import { Check, Home, Plus } from "lucide-react";
 import { NavLink, useLocation } from "react-router";
 import {
   Sidebar,
@@ -9,18 +9,20 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
 } from "@/components/ui/sidebar";
 import NewTodo from "./NewTodo";
 import { useEffect, useState } from "react";
-
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const items = [
   {
     title: "Home",
     url: "/",
     icon: Home,
+  },
+  {
+    title: "Completed",
+    url: "/completed",
+    icon: Check,
   },
 ];
 

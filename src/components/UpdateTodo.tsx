@@ -4,7 +4,6 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
@@ -18,20 +17,18 @@ interface Props {
   todo: Todo;
 }
 const UpdateTodo = ({ open, onOpenChange, todo }: Props) => {
-  const [newTodo, setNewTodo] = useState<string>("");
+  const [newTodo, setNewTodo] = useState<string>(todo.title);
   const { mutate } = useUpdateTodo();
   const handleSubmit = () => {
     if (!newTodo.trim()) {
       toast.error("Todo name is required");
       return;
     }
-    console.log(newTodo);
-
     onOpenChange(false);
     const addedTodo: Todo = {
       id: todo.id,
       title: newTodo,
-      completed: false,
+      completed: todo.completed,
     };
     mutate(addedTodo);
   };
