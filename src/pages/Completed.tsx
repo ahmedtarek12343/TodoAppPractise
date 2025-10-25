@@ -1,12 +1,6 @@
-import { useSuspenseQuery } from "@tanstack/react-query";
 import {
   Table,
   TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
 } from "@/components/ui/table";
 import { TodosList } from "@/components/TodosList";
 import { Suspense } from "react";
