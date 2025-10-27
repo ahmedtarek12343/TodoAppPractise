@@ -7,7 +7,7 @@ export const useUpdateTodo = () => {
   return useMutation({
     mutationFn: async (todo: Todo) => {
       const response = await fetch(
-        `https://68fa2b24ef8b2e621e7f0afa.mockapi.io/Todo/${todo.id}`,
+        `https://68feb56a7c700772bb1450d3.mockapi.io/Todo/${todo.id}`,
         {
           method: "PUT",
           headers: {

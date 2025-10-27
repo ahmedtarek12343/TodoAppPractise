@@ -6,7 +6,7 @@ export const useRemoveTodo = () => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (id: string) =>
-      fetch(`https://68fa2b24ef8b2e621e7f0afa.mockapi.io/Todo/${id}`, {
+      fetch(`https://68feb56a7c700772bb1450d3.mockapi.io/Todo/${id}`, {
         method: "DELETE",
       }),
     onError: (error) => {
